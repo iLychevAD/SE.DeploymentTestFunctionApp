@@ -1,1 +1,1 @@
-# SE.DeploymentTestFunctionApp
+# SE.TestFunctionApp
