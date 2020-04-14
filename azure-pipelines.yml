@@ -28,10 +28,11 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
+
 - task: AzureFunctionApp@1
   inputs:
     azureSubscription: 'Pay-As-You-Go (4b203eea-b1ab-46b9-9b16-a7a9f3b7befd)-2001'
     appType: 'functionApp'
     appName: 'DevOpsTestFunction'
-    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    package: '$(build.artifactStagingDirectory)\WebApp.zip'
     deploymentMethod: 'auto'
