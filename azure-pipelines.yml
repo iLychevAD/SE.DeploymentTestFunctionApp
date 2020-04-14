@@ -36,3 +36,11 @@ steps:
     appName: 'DevOpsTestFunction'
     package: '$(build.artifactStagingDirectory)\WebApp.zip'
     deploymentMethod: 'auto'
+
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Pay-As-You-Go (4b203eea-b1ab-46b9-9b16-a7a9f3b7befd)-2001'
+    appType: 'functionApp'
+    WebAppName: 'DevOpsTestFunction'
+    packageForLinux: '$(build.artifactStagingDirectory)\WebApp.zip'
